@@ -81,10 +81,10 @@ class TicTacToe
             elsif (@board[comb[0]] == "O") && (@board[comb[1]] == "O") && (@board[comb[2]] == "O")
                 @winner = "O"
                 return true
-            else
-                return false
             end
         end
+
+        return false
     end
     
     #see if full
@@ -104,7 +104,7 @@ class TicTacToe
 
     #get the winner of the game
     def winner
-        return @winner != "" ? "#{@winner} has won the game!" : "No winner yet!"
+        puts "#{@winner} has won the game!" : "No winner yet!"
     end
 
     #main loop to play the game, until the game is over, keep taking turns
