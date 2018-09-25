@@ -104,8 +104,13 @@ class TicTacToe
 
     #get the winner of the game
     def winner
-        puts "#{@winner} has won the game!" : "No winner yet!"
-    end
+      if won?
+        puts "Player #{@winner} has won the game!"
+        return @winner
+      else
+        puts "No winner yet!"
+      end
+    end 
 
     #main loop to play the game, until the game is over, keep taking turns
     #then check if the game has been won, declare winner,
